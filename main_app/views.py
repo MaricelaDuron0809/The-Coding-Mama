@@ -77,11 +77,6 @@ class PostDetail(TemplateView):
 
         return render(request, 'post_detail.html', context)
     
-    
-    
-    
-    
-    
 
 class PostUpdate(UpdateView):
     model = Post
@@ -100,3 +95,15 @@ class PostDelete(DeleteView):
     def test_func(self):
         post = self.get_object()
         return self.request.user == post.mama
+
+class CommentDeleteView(DeleteView):
+    model = Comment
+    template_name = 'comment_delete.html'
+
+    def get_success_url(self):
+        pk = self.kwargs['post_pk']
+        return reverse_lazy('post_detail', kwargs={'pk': pk})
+
+    def test_func(self):
+        comment = self.get_object()
+        return self.request.user == comment.mama
