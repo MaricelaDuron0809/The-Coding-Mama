@@ -18,7 +18,7 @@ class CommentForm(forms.ModelForm):
         label='',
         widget=forms.Textarea(
             attrs={'rows': '3',
-                   'placeholder': '.....'}
+                   'placeholder': ''}
         ))
 
     class Meta:
