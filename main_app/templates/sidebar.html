@@ -1,0 +1,85 @@
+<div class="sidenav"
+        style="
+        
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 10;
+  background-color: rgba(226, 199, 235, 0.502);
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  ">
+
+
+<div class="logo" style="padding-left: 70px;" >
+            <a class="navbar-brand"
+              {% if user.is_authenticated %}
+                href="{% url 'post_list' %}"
+              {% else %}
+              href="{% url 'landing' %}"
+              {% endif %}
+            >
+                
+                <img src="https://imgur.com/ulDkAUK.png">
+
+              </a>
+  </div>
+
+<div class="buttons">
+ <!-- VENT -->
+<button type="button" 
+style="background-color: chartreuse; width: 260px; padding: 20px 20px 20px 20px;
+position:relative; top:50px; background-color: rgba(226, 199, 235, 0.502);  
+border: none; color:magenta; border-radius: 2px;
+">
+<a class="nav-link" class="btn btn-primary" href="{% url 'post_list' %}" style="color: mediumvioletred;" >
+#VENTING SESSION </button></a>
+<!-- VENT -->
+
+<!-- BLOG OF THE WEEK -->
+
+<button type="button" 
+style="background-color: chartreuse; width: 260px; padding: 20px 20px 20px 20px;
+position:relative; top:70px; background-color: rgba(168, 110, 187, 0.502);  
+border: none; color:magenta; border-radius: 2px;
+">
+<a class="nav-link" class="btn btn-primary" href="" style="color:mediumvioletred" >
+#BLOG OF THE WEEK</button></a>
+<!-- BLOG OF THE WEEK -->
+
+
+<!-- MEMES -->
+<button type="button" 
+style="background-color: chartreuse; width: 260px; padding: 20px 20px 20px 20px;
+position:relative; top:90px; background-color: rgba(120, 63, 139, 0.502);  
+border: none; color:magenta; border-radius: 2px;
+">
+<a class="nav-link" class="btn btn-primary" href="" style="color: mediumvioletred;" >
+#MEMES</button></a>
+<!-- MEMES -->
+
+<!-- MOM GUILT -->
+<button type="button" 
+style="background-color: chartreuse; width: 260px; padding: 20px 20px 20px 20px;
+position:relative; top:110px; background-color: rgba(131, 66, 153, 0.502);  
+border: none; color:magenta; border-radius: 2px;
+">
+<a class="nav-link" class="btn btn-primary" href="" style="color: mediumvioletred" >
+#MOM GUILT</button></a>
+
+
+<!-- MOM GUILT -->
+
+
+</div>
+
+
+     
+
+
+
+
+              </div>

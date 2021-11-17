@@ -3,43 +3,52 @@
 
 {% block content %}
 
-<body class="feed" style="background-image: url('https://imgur.com/oRiWmMc.png');
+<body class="feed" style="background-image: url('https://imgur.com/LP723FJ.png');
 background-position: center;
 background-repeat: no-repeat;
-background-size: cover;">
+background-size: cover;
+padding-top: 70px;
+">
 
 
 
-    <div class="container" style="background-color: rgba(226, 199, 235, 0.502); 
-    width: 50rem;  border-radius: 2%;  align-items:center;
+    <div class="container" style="background-color: rgba(63, 11, 51, 0.253); 
+    width: 65rem; align-items:center;
   
    ">
+   
+   Welcome: {{mama.username}} 
+   
 
-
-        <div class="row justify-content-center mt-3">
-            <div class="col-md-5 col-sm-12">
-                <h5>Add a Post!</h5>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-3 mb-5">
+        <div class="row justify-content-center mt-3 mb-5" style="padding-top: 50px;">
             <div class="col-md-5 col-sm-12">
                 <form method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="d-grid gap-2">
-                        <button class="btn btn-success mt-3">Submit!</button>
+                        <button class="btn btn-success mt-3" style="background-color: rgb(224, 33, 199);">Submit!</button>
                     </div>
                 </form>
             </div>
         </div>
+
+
         {% for post in post_list %}
-        <div class="row justify-content-center mt-3">
-            <div class="col-md-5 col-sm-12 border-bottom position-relative">
-                <p><strong>{{ post.mama }}</strong> {{ post.created_at }}</p>
+        
+        <div class="card" style="width: 40rem; height: 10rem;  text-align: center; margin: 0 auto; float: none; margin-bottom: 50px;
+        background-color: rgba(32, 1, 42, 0.644); 
+        position: sticky;
+        
+        ">
+            <div class="card-body" style="color: white">
+                <p><strong>{{ post.mama }}</strong></p>
                 <p>{{ post.body }}</p>
+                <p>{{ post.created_at }}</p>
                 <a class="stretched-link" href="{% url 'post_detail' post.pk %}"></a>
+             
+           
             </div>
-        </div>
+          </div>
         {% endfor %}
     </div>
 
@@ -47,6 +56,17 @@ background-size: cover;">
 
 
 
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 
  

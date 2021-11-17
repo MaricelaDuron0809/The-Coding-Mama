@@ -5,7 +5,7 @@ class PostForm(forms.ModelForm):
     body = forms.CharField(
         label='',
         widget=forms.Textarea(attrs={
-            'rows': '3',
+            'rows': '7',
             'placeholder': 'Vent Away Mama....'
             }))
 
