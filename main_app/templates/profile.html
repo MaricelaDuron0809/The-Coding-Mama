@@ -1,8 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container">
-    <div class="row justify-content-center mt-5">
+{% include 'sidebar.html' %}
+<body class="feed" style="background-image: url('https://imgur.com/IQO1TMf.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding-top: 100px;
+background-attachment: fixed;
+
+">
+
+<div class="container"
+style="background-color: rgba(49, 6, 39, 0.253); 
+    width: 50rem; align-items:center;border-radius: 5px;  
+   ">
+
+
+    <div class="row justify-content-center mt-5"
+    style="color:white;
+     font-family: 'Courier New', Courier, monospace;
+     text-align: center;
+     font-weight: bolder;
+     font-size: 30px;
+     
+    ">
             {% if profile.name %}
             <h3 class="py-4">{{ profile.name }}
                 <span>
@@ -21,16 +43,30 @@
 
            
         </div>
-    </div>
+    
 
     {% for post in posts %}
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-8 col-sm-12 border-bottom position-relative">
-            <p><strong>{{ post.mama }}</strong> {{ post.created_at }}</p>
+    <div class="row justify-content-center mt-5"
+    style="width: 40rem; height: 10rem;  text-align: center; margin: 0 auto; float: none; margin-bottom: 20px;
+        background-color: rgba(32, 1, 42, 0.644); 
+        position: sticky;
+        font-family: 'Courier New', Courier, monospace;
+        color:rgb(255, 255, 255);border-radius: 5px;
+        font-size: 18px;
+        padding-top: 25px;
+        overflow-wrap:break-word;
+     
+
+        "
+    
+    >
+        <div class="col-md-8 col-sm-12 position-relative" style="text-align: center;">
             <p>{{ post.body }}</p>
+            <p>{{ post.created_at }}</p>
             <a href="{% url 'post_detail' post.pk %}" class="stretched-link"></a>
         </div>
     </div>
     {% endfor %}
+</div>
 </div>
 {% endblock content %}

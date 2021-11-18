@@ -1,5 +1,5 @@
 <div class="container gx-0"
-style="size: 50px;"
+style="position:relative; right: 1200px; top:-45px"
 
 
 >
@@ -15,8 +15,9 @@ style="size: 50px;"
         </button>
             {% if user.is_authenticated %}
               <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fas fa-user"></i></a>
-                <ul class="dropdown-menu">
+                <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                <i class="fas fa-user fa-2x"></i></a>
+                <ul class="dropdown-menu" style="background-color: rgba(49, 6, 39, 0.253); "> 
                   <li><a class="dropdown-item" href="{% url 'profile' user.profile.pk %}">Profile</a></li>
                   <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
                 </ul>

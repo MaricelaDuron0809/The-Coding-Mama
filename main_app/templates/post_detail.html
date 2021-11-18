@@ -23,18 +23,20 @@ style="background-color: rgba(49, 6, 39, 0.253);
 </div>
 
 <div class="row justify-content-center mt-3"
-style="width: 40rem; height: 10rem;  text-align: center; margin: 0 auto; float: none; margin-bottom: 50px;
+style="width: 40rem;   text-align: center; margin: 0 auto; float: none; margin-bottom: 50px;
 background-color: rgba(32, 1, 42, 0.842); 
 font-family: 'Courier New', Courier, monospace;
 color: white;
 position:relative;
 top: 30px;
-border-radius: 5px;">
-
-            <p>
-                <strong>{{ post.mama }}</strong> 
-                <p>{{ post.body }}</p>
-                <p>{{ post.created_at }}</p> 
+border-radius: 5px;
+font-size: 18px;
+overflow-wrap:break-word;
+">
+<p>
+    <strong>{{ post.mama }}</strong> 
+    <p>{{ post.body }}</p>
+    <p>{{ post.created_at }}</p> 
            
 
 <!-- EDIT BUTTON -->
@@ -51,8 +53,6 @@ width: 150px; position: relative;">
                  {% endif %}
             </p>
 </div>
-
-
 
 <!-- ADD COMMENT -->
     <div class="row justify-content-center mt-3">
@@ -80,31 +80,22 @@ width: 150px; position: relative;">
 
 <!-- SHOW ALL COMMENTS  -->
     {% for comment in comments %}
-    <div class="row justify-content-center mt-3 mb-5" 
-    style="width: 40rem; height: 10rem;  text-align: center; margin: 0 auto; float: none; margin-bottom: 50px;
-        background-color: rgba(32, 1, 42, 0.644); 
-        position: sticky;
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        border-radius: 5px;
-        align-items: center;
-    ">
-        <div class="col-md-5 col-sm-12"
-        style="text-align: center;"
-        >
-            <p >
-                <strong>{{ comment.mama }}</strong> 
-                {% if request.user == comment.mama %}
+<div class="row justify-content-center mt-3 mb-5" 
+    style="width: 40rem; text-align: center; margin: 0 auto; float: none; margin-bottom: 50px; background-color: rgba(32, 1, 42, 0.644); 
+    position: sticky;font-family: 'Courier New', Courier, monospace;color: white;border-radius: 5px;align-items: center;
+    font-size: 18px;overflow-wrap:break-word;">
+
+<div class="col-md-5 col-sm-12"style="text-align: center;">
+        <p>
+            <strong>{{ comment.mama }}</strong> 
+            {% if request.user == comment.mama %}
+
 <!-- DELETE COMMENT BUTTON -->
 <button class="edit-button" style="background-color: rgb(190, 59, 173); border-radius: 2px; font-weight: bold; border: none;
-width: 150px; position: relative; left: 120px; top: 110px;
-
-
-
-">
-            <a href="{% url 'comment_delete' post.pk comment.pk %}" style="color: white;">delete</button></a>
+width: 150px; position: relative;">
+        <a href="{% url 'comment_delete' post.pk comment.pk %}" style="color: white;">delete</button></a>
                 {% endif %}
-            </p>
+        </p>
             <p >{{ comment.comment }}</p>
             <p >{{ comment.created_at }}</p>
         </div>
