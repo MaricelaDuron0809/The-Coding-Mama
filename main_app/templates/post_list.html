@@ -2,25 +2,44 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
-<body class="feed" style="background-image: url('https://imgur.com/LP723FJ.png');
+{% include 'sidebar.html' %}
+<body class="feed" style="background-image: url('https://imgur.com/IQO1TMf.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-padding-top: 70px;
+padding-top: 100px;
+background-attachment: fixed;
+
 ">
 
 
 
-    <div class="container" style="background-color: rgba(63, 11, 51, 0.253); 
-    width: 65rem; align-items:center;
+    <div class="container" style="background-color: rgba(49, 6, 39, 0.253); 
+    width: 50rem; align-items:center;border-radius: 5px;
   
    ">
-   
-   Welcome: {{mama.username}} 
-   
+   <!-- USERNAME -->
+   <div class="row justify-content-center mt-5" style="align-items: center;">
+      <a style="color:rgb(228, 8, 228); font-size: 36px; text-align: center;">Welcome: </a> 
+    {% if profile.name %}
+    <p class="name">{{ profile.name }}
+        <span>
+            {% if request.user == user %}
+            {% endif %}
+        </span>
+        {% else %}
+        <p class="name" style="color:rgb(253, 253, 253); font-size: 30px; text-align: center; font-family: 'Courier New', Courier, monospace;">{{ user.username }}
+            <span>
+                {% if request.user == user %}
+                {% endif %}
+            </span>
+        </p>
+        {% endif %}
+    </p>
+<!-- USERNAME -->
 
-        <div class="row justify-content-center mt-3 mb-5" style="padding-top: 50px;">
+
+        <div class="row justify-content-center mt-3 mb-5" style="padding-top: 10px;">
             <div class="col-md-5 col-sm-12">
                 <form method="POST">
                     {% csrf_token %}
@@ -38,7 +57,7 @@ padding-top: 70px;
         <div class="card" style="width: 40rem; height: 10rem;  text-align: center; margin: 0 auto; float: none; margin-bottom: 50px;
         background-color: rgba(32, 1, 42, 0.644); 
         position: sticky;
-        
+        font-family: 'Courier New', Courier, monospace;
         ">
             <div class="card-body" style="color: white">
                 <p><strong>{{ post.mama }}</strong></p>

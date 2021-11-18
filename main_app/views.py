@@ -122,3 +122,5 @@ class Profile(TemplateView):
         }
 
         return render(request, 'profile.html', context)
+    
+    
