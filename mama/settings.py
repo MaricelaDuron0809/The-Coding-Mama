@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,10 @@ SECRET_KEY = 'django-insecure-2ojb10ir%f6q)s7-*&0l*$jgjb!5i8lrru0%o6mczf)&vjv^5)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['the-coding-mama.herokuapp.com']
+
+
 
 AUTHENTICATION_BACKENDS = [
    
@@ -93,12 +97,26 @@ WSGI_APPLICATION = 'mama.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'd8426nlrtdkecd',
+        'USER': 'yieqxiutiuamtl',
+        'PASSWORD': 'f860e8c3345b143ea0383b9892bf0d7a230730257ee043dc519a839d283ef4b7',
+        'HOST': 'ec2-52-54-23-130.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
+
+
 
 
 # Password validation
