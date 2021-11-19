@@ -8,16 +8,19 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<body class="feed" style="background-image: url('https://imgur.com/l7V3DXt.png');
+<body class="feed" style="background-image: url('https://imgur.com/Sz7NTZC.png');
 background-repeat: no-repeat;
-background-size: cover;
+background-size: cover;">
+
+
+<div class="row justify-content-center" style="position: relative;top:180px; left: 30px; 
+font-size: 50px; font-family: 'Courier New', Courier, monospace;
+
 ">
 
-<div class="row justify-content-center" style="position: relative;top:150px; left: 30px; 
-font-size: 50px; 
-">
+
   <div class="col-md-6 col-sm-12">
-    <form class="login" method="POST" action="{% url 'account_login' %}">
+    <form class="login" method="POST" style="color:black;" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form|crispy }}
       {% if redirect_field_value %}
@@ -25,11 +28,13 @@ font-size: 50px;
       {% endif %}
       <a class="button secondaryAction"
       style="font-size: 15px;
-       color: rgb(8, 8, 8);"
+       color: rgb(8, 8, 8);
+       font-family: 'Courier New', Courier, monospace;
+      
+       "
       href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-      <div class="d-grid gap-2"
-      >
-        <button class="mt-3 btn btn-dark primaryAction" type="submit">{% trans "Sign In" %}</button>
+      <div class="d-grid gap-2">
+        <button class="mt-3 btn btn-dark primaryAction" type="submit" style="font-family: 'Courier New', Courier, monospace;">{% trans "Sign In" %}</button>
       </div>
     </form>
   </div>

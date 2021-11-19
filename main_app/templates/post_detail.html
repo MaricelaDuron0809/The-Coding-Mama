@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include 'sidebar.html' %}
-<body class="feed" style="background-image: url('https://imgur.com/IQO1TMf.png');
+<body class="feed" style="background-image: url('https://imgur.com/Sz7NTZC.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -14,7 +14,7 @@ background-attachment: fixed;
 
 <div class="container"
 style="background-color: rgba(49, 6, 39, 0.253); 
-    width: 50rem; align-items:center;border-radius: 5px;
+    width: 50rem; align-items:center;border-radius: 10px;
   
    "
 >
@@ -57,7 +57,7 @@ width: 150px; position: relative;">
 <!-- ADD COMMENT -->
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12">
-            <h5 style="text-align: center; color:white">Add a Comment!</h5>
+            <h5 style="text-align: center; color:white;font-family: 'Courier New', Courier, monospace;">Add a Comment!</h5>
         </div>
     </div>
 <!-- ADD COMMENT -->
@@ -69,7 +69,7 @@ width: 150px; position: relative;">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="d-grid gap-2">
-                    <button class="btn btn-success mt-3" style="background-color: rgb(224, 33, 199);" >Submit!</button>
+                    <button class="btn btn-success mt-3" style="font-family: 'Courier New', Courier, monospace;background-color: rgb(224, 33, 199);" >Submit!</button>
                 </div>
             </form>
         </div>
@@ -82,22 +82,21 @@ width: 150px; position: relative;">
     {% for comment in comments %}
 <div class="row justify-content-center mt-3 mb-5" 
     style="width: 40rem; text-align: center; margin: 0 auto; float: none; margin-bottom: 50px; background-color: rgba(32, 1, 42, 0.644); 
-    position: sticky;font-family: 'Courier New', Courier, monospace;color: white;border-radius: 5px;align-items: center;
+    position: sticky;font-family: 'Courier New', Courier, monospace;color: white;border-radius: 9px;align-items: center;
     font-size: 18px;overflow-wrap:break-word;">
 
 <div class="col-md-5 col-sm-12"style="text-align: center;">
         <p>
             <strong>{{ comment.mama }}</strong> 
             {% if request.user == comment.mama %}
-
-<!-- DELETE COMMENT BUTTON -->
-<button class="edit-button" style="background-color: rgb(190, 59, 173); border-radius: 2px; font-weight: bold; border: none;
-width: 150px; position: relative;">
-        <a href="{% url 'comment_delete' post.pk comment.pk %}" style="color: white;">delete</button></a>
-                {% endif %}
+            {% endif %}
         </p>
             <p >{{ comment.comment }}</p>
             <p >{{ comment.created_at }}</p>
+<!-- DELETE COMMENT BUTTON -->
+<button class="edit-button" style="background-color: rgb(190, 59, 173); border-radius: 2px; font-weight: bold; border: none;
+width: 150px; position: relative; bottom: 12px;">
+        <a href="{% url 'comment_delete' post.pk comment.pk %}" style="color: white;">delete</button></a>
         </div>
     </div>
     {% endfor %}

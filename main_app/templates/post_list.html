@@ -3,23 +3,24 @@
 
 {% block content %}
 {% include 'sidebar.html' %}
-<body class="feed" style="background-image: url('https://imgur.com/IQO1TMf.png');
+<body class="feed" style="background-image: url('https://imgur.com/Sz7NTZC.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 padding-top: 100px;
 background-attachment: fixed;
 
+
 ">
 
 
 
     <div class="container" style="background-color: rgba(49, 6, 39, 0.253); 
-    width: 50rem; align-items:center;border-radius: 5px;  
+    width: 50rem; align-items:center;border-radius: 10px;  
    ">
    <!-- USERNAME -->
    <div class="row justify-content-center mt-5" style="align-items: center;">
-      <a style="color:rgb(228, 8, 228); font-size: 36px; text-align: center;">Welcome: </a> 
+      <a style="color:rgb(228, 8, 228); font-size: 36px; text-align: center;font-family: 'Courier New', Courier, monospace;">Welcome: </a> 
     {% if profile.name %}
     <p class="name">{{ profile.name }}
         <span>
@@ -40,11 +41,12 @@ background-attachment: fixed;
 
         <div class="row justify-content-center mt-3 mb-5" style="padding-top: 10px;">
             <div class="col-md-5 col-sm-12">
-                <form method="POST">
+                <form method="POST" style="font-family: 'Courier New', Courier, monospace;
+                ">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="d-grid gap-2">
-                        <button class="btn btn-success mt-3" style="background-color: rgb(224, 33, 199);">Submit!</button>
+                        <button class="btn btn-success mt-3" style="font-family: 'Courier New', Courier, monospace; background-color: rgb(224, 33, 199);">Submit!</button>
                     </div>
                 </form>
             </div>

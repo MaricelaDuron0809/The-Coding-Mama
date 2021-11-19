@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include 'sidebar.html' %}
-<body class="feed" style="background-image: url('https://imgur.com/IQO1TMf.png');
+<body class="feed" style="background-image: url('https://imgur.com/Sz7NTZC.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -14,7 +14,10 @@ background-attachment: fixed;
 <div class="container"
 style="background-color: rgba(49, 6, 39, 0.253); 
     width: 50rem; align-items:center;border-radius: 5px;
-    height: 100vh;"
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    "
+    
 >
     <div class="row mt-5">
         <div class="col-md-3 col-sm-6">
@@ -28,7 +31,7 @@ style="background-color: rgba(49, 6, 39, 0.253);
         <form method="POST">
             {% csrf_token %}
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-danger" style="font-family: 'Courier New', Courier, monospace;">Delete</button>
             </div>
         </form>
     </div>
