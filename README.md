@@ -28,7 +28,7 @@ Heroku
 
 <h3>Wireframe:</h3> https://www.figma.com/file/OObY6Jy0oDMVRXZhyFe8uA/Untitled?node-id=7%3A17# The-Coding-Mama
 
-<h3>ERD:</3> https://cloud.smartdraw.com/share.aspx/?pubDocShare=9D66135DF5F9A4C5F0173423940CB72421D
+<h3>ERD:</h3> https://cloud.smartdraw.com/share.aspx/?pubDocShare=9D66135DF5F9A4C5F0173423940CB72421D
 
 
 
