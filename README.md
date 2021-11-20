@@ -9,7 +9,7 @@ Mamas can create an account with an alias an no one will know who they really ar
 
 
 
-<h3>Technologies used:</3>
+<h3>Technologies used:</h3>
 Django 
 Python
 HTML5
