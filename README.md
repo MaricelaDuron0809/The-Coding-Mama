@@ -33,4 +33,7 @@ Heroku
 
 
 
+<h4>Unsolved Problems:</h4
+I am not very happy with the layout and css of my app, I used bootstrap beacuse I did not think I was going to have enough time to style my app. 
+I do plan on starting from scratch without bootsrap once I complete my course at GA.
 
