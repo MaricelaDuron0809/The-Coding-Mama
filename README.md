@@ -12,10 +12,10 @@ Mamas can create an account with an alias an no one will know who they really ar
 <h3>Technologies used:</h3>
 Django <br>
 Python<br>
-HTML5
-BootStrap
-PostgreSQL
-GitHub
+HTML5<br>
+BootStrap<br>
+PostgreSQL<br>
+GitHub<br>
 Heroku
 
 
