@@ -22,10 +22,6 @@ Heroku
 <h4>Wireframe:</h4> https://www.figma.com/file/OObY6Jy0oDMVRXZhyFe8uA/Untitled?node-id=7%3A17# The-Coding-Mama
 <h4>ERD:</h4> https://cloud.smartdraw.com/share.aspx/?pubDocShare=9D66135DF5F9A4C5F0173423940CB72421D
 
-<h4>Unsolved Problems:</h4>
-I am not very happy with the layout and css of my app, I used bootstrap beacuse I did not think I was going to have enough time to style my app. 
-I do plan on starting from scratch without bootsrap once I complete my course at GA.
-
 <h4>Future Features:</h4>
 Likes on posts and comments<br>
 Edit profile<br>
